@@ -1,0 +1,874 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 8% 45%,
+            rgba(91, 20, 38, 0.38),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(81, 48, 20, 0.18),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #100b0d,
+            #090909 55%,
+            #0c0c0b
+        );
+
+    color: #eeeeee;
+
+    font-family: "DM Sans", sans-serif;
+
+    min-width: 320px;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.page {
+
+    width: min(1150px, 92%);
+
+    margin: auto;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    height: 80px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.logo-icon {
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #73503e;
+
+    transform: rotate(45deg);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #b8795e;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+}
+
+
+.logo-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #b8795e;
+}
+
+
+.logo-text h2 {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+}
+
+
+.logo-text span {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #756d6a;
+}
+
+
+.system-status {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #77716f;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.status-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #5cc28a;
+
+    box-shadow: 0 0 8px #5cc28a;
+}
+
+
+.separator {
+
+    color: #514b49;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: 1fr 355px;
+
+    gap: 85px;
+
+    padding: 50px 0 38px;
+}
+
+
+/* =========================================
+   LEFT SECTION
+========================================= */
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #c5a26c;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+.eyebrow span {
+
+    width: 24px;
+
+    height: 1px;
+
+    background: #a88954;
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 4vw, 58px);
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+}
+
+
+h1 em {
+
+    color: #b83262;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+
+    color: #777170;
+
+    max-width: 530px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 34px;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #aaa09c;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.section-title span {
+
+    color: #b99c68;
+}
+
+
+/* =========================================
+   PARAMETERS GRID
+========================================= */
+
+.parameters-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   INPUT CARD
+========================================= */
+
+.input-card {
+
+    height: 68px;
+
+    position: relative;
+
+    padding: 12px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025),
+            rgba(255,255,255,0.005)
+        );
+
+    transition: all 0.3s ease;
+}
+
+
+.input-card:hover {
+
+    border-color: rgba(190, 46, 91, 0.45);
+
+    background:
+        rgba(190, 46, 91, 0.035);
+}
+
+
+.input-card label {
+
+    display: block;
+
+    color: #8b8582;
+
+    font-size: 9px;
+
+    margin-bottom: 6px;
+}
+
+
+.input-card span {
+
+    position: absolute;
+
+    right: 9px;
+
+    top: 12px;
+
+    font-size: 7px;
+
+    color: #55504e;
+}
+
+
+.input-card input {
+
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: #eeeeee;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+}
+
+
+.input-card input:focus {
+
+    color: #d63e70;
+}
+
+
+/* remove number arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 16px;
+}
+
+
+.analyze-btn {
+
+    height: 47px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            100deg,
+            #9e234d,
+            #d52d68
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 8px 25px rgba(180, 28, 84, 0.20);
+
+    transition: 0.3s ease;
+}
+
+
+.analyze-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(180, 28, 84, 0.35);
+}
+
+
+.diamond {
+
+    color: #e8c875;
+
+    margin-right: 9px;
+
+    font-size: 8px;
+}
+
+
+.arrow {
+
+    margin-left: 15px;
+
+    font-size: 16px;
+
+    vertical-align: middle;
+}
+
+
+.reset-btn {
+
+    background: none;
+
+    border: none;
+
+    color: #706966;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+
+.reset-btn:hover {
+
+    color: white;
+}
+
+
+/* =========================================
+   RESULT PANEL
+========================================= */
+
+.result-panel {
+
+    min-height: 570px;
+
+    border: 1px solid rgba(255,255,255,0.13);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025),
+            rgba(255,255,255,0.005)
+        );
+
+    padding: 22px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   RESULT TITLE
+========================================= */
+
+.result-title {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #817b79;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+}
+
+
+.result-title span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background: #35302f;
+}
+
+
+/* =========================================
+   WINE GLASS
+========================================= */
+
+.wine-glass {
+
+    margin-top: 105px;
+
+    width: 100px;
+
+    height: 160px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+.glass-bowl {
+
+    width: 60px;
+
+    height: 85px;
+
+    border: 1px solid #66504c;
+
+    border-top: none;
+
+    border-radius: 0 0 35px 35px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.wine-liquid {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 30px;
+
+    background:
+        linear-gradient(
+            to top,
+            #9d194e,
+            #bd285e
+        );
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:
+        0 -8px 20px rgba(190, 25, 90, 0.2);
+}
+
+
+.glass-stem {
+
+    height: 47px;
+
+    width: 1px;
+
+    background: #66504c;
+}
+
+
+.glass-base {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #66504c;
+}
+
+
+/* =========================================
+   AWAITING
+========================================= */
+
+.awaiting {
+
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+
+.awaiting h3 {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #b7aeab;
+
+    margin-bottom: 10px;
+}
+
+
+.awaiting p {
+
+    color: #625c5a;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    max-width: 190px;
+}
+
+
+/* =========================================
+   RESULT INFO
+========================================= */
+
+.result-info {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 22px;
+
+    right: 22px;
+
+    border-top: 1px solid rgba(255,255,255,0.09);
+
+    padding-top: 16px;
+}
+
+
+.result-info div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.result-info small {
+
+    color: #5c5755;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+
+.result-info strong {
+
+    color: #817b78;
+
+    font-size: 8px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    height: 50px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #4c4745;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .main-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .result-panel {
+
+        min-height: 500px;
+    }
+
+    .wine-glass {
+
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .page {
+
+        width: 90%;
+    }
+
+
+    .header {
+
+        height: 70px;
+    }
+
+
+    .system-status {
+
+        display: none;
+    }
+
+
+    h1 {
+
+        font-size: 42px;
+    }
+
+
+    .parameters-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .main-container {
+
+        padding-top: 35px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .parameters-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .logo-text h2 {
+
+        font-size: 12px;
+    }
+
+
+    .actions {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .analyze-btn {
+
+        width: 100%;
+    }
+}
